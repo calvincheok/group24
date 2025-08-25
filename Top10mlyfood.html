@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Best Malaysian Food – Recipes & Guide</title>
+   <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet">
+    <!-- font wesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/HP.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/share.css">
+    
+  <style>
+    :root { --bg:#eef2ff; --card:#a5b4fc; --ink:#0b1020; --muted:#121833; --accent:#7dd3fc; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%,#ffffff 100%);}
+    header{padding:32px 16px; text-align:center; border-bottom:1px solid rgba(0, 0, 0, 0.06); position:sticky; top:0; backdrop-filter: blur(6px); background:rgba(196, 210, 255, 0.7)}
+    h1{margin:0; font-size:clamp(24px,3.5vw,42px); letter-spacing:.5px}
+    p.lede{max-width:900px; margin:12px auto 0; color:var(--muted)}
+    main{max-width:1100px; margin:32px auto; padding:0 16px 64px;}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px}
+    .card{background:linear-gradient(180deg,rgb(255, 255, 255),rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:18px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,.25); transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-4px); box-shadow:0 14px 32px rgb(255, 255, 255)}
+    .img-wrap{aspect-ratio:3/2; overflow:hidden; background:#ffffff}
+    .img-wrap img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.1) contrast(1.05)}
+    .content{padding:16px 16px 18px}
+    h2{margin:0 0 8px; font-size:20px}
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 12px}
+    .tag{padding:4px 8px; border-radius:999px; background:#00aeffbd; color:#b6e3ff; border:1px solid rgba(125,211,252,.25); font-size:12px}
+    .section{margin-top:10px}
+    .section h3{margin:0 0 8px; font-size:14px; color:#768ff2; letter-spacing:.3px; text-transform:uppercase}
+    .section ul{margin:0 0 6px 18px; padding:0}
+    .section li{margin:4px 0}
+    footer{max-width:1100px; margin:0 auto; padding:24px 16px 56px; color:rgb(123, 123, 123)}
+    .appendix{margin-top:32px; padding:16px; border:1px dashed rgb(255, 255, 255); border-radius:12px}
+    a{color:#93c5fd}
+    .credits{font-size:12px; color:#a5b4fc}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+
+		<div id="mySidebar" class="sidebar">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="homepage.html">Home</a>
+			<a href="aboutUs.html">About Us</a>
+			<a href="japaneseFood.html">Japanese Cuisine</a>
+			<a href="MalaysiaFood.html">Malaysian Cuisine</a>
+			<a href="thaiFood.html">Thai Cuisine</a>
+			<a href="koreanFood.html">Korean Cuisine</a>
+			<a href="Top10mlyfood.html">Top 10 Malaysia food</a>
+			<a href="feedback.html">feedback</a>
+		</div>
+
+		<div id="main">
+			<button class="openbtn" onclick="openNav()">☰</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="nav__links">
+				<li class="link "><a href="homepage.html">Home</a></li>
+				<li class="link"><a href="aboutUs.html">About Us</a></li>
+				<li class="link"><a href="japaneseFood.html">Japanese Cuisine</a></li>
+				<li class="link"><a href="MalaysiaFood.html">Malaysian Cuisine</a></li>
+				<li class="link"><a href="thaiFood.html">Thai Cuisine</a></li>
+				<li class="link"><a href="koreanFood.html">Korean Cuisine</a></li>
+				<li class="link"><a href="Top10mlyfood.html">Top 10 Malaysia food</a></li>
+				<li class="link"><a href="feedback.html">feedback</a></li>
+			</ul>
+		</div>
+	</nav>
+
+  <header>
+    <h1>Top 10 Best Malaysian Food</h1>
+    <p class="lede">A simple guide to iconic Malaysian dishes you can cook at home. Each card includes a quick recipe summary and tasting notes.</p>
+  </header>
+  <main class="grid">
+
+    <!-- 1 Nasi Lemak -->
+    <article class="card" id="nasi-lemak">
+      <div class="img-wrap"><img src="image/nasi-lemak.jpg" alt="Nasi Lemak on banana leaf with sambal, ikan bilis, peanuts and egg"></div>
+      <div class="content">
+        <h2>1) Nasi Lemak</h2>
+        <div class="tags"><span class="tag">Coconut Rice</span><span class="tag">Sambal</span><span class="tag">Halal</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Rice: Rinse, then cook with coconut milk, pandan, ginger & salt.</li>
+            <li>Sambal: Fry blended dried chilies, onion, garlic, belacan; simmer with tamarind & sugar.</li>
+            <li>Serve with fried ikan bilis, peanuts, cucumber & egg.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Fragrant pandan-coconut rice with a sweet-spicy sambal. The smaller the <em>ikan bilis</em>, the better the crunch.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 Char Kway Teow -->
+    <article class="card" id="char-kway-teow">
+      <div class="img-wrap"><img src="image/char-kway-teow.jpg" alt="Char Kway Teow Penang style with prawns and chives"></div>
+      <div class="content">
+        <h2>2) Char Kway Teow</h2>
+        <div class="tags"><span class="tag">Wok Hei</span><span class="tag">Street Food</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Stir-fry garlic, prawns, Chinese sausage; add flat rice noodles.</li>
+            <li>Season with light/dark soy, fish sauce, chili; toss with eggs, chives & sprouts.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Cook in small batches over high heat to build that smoky <em>wok hei</em>.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 Asam Laksa -->
+    <article class="card" id="asam-laksa">
+      <div class="img-wrap"><img src="image/asam-laksa.jpg" alt="Penang Asam Laksa bowl with mackerel, mint, pineapple and torch ginger"></div>
+      <div class="content">
+        <h2>3) Asam Laksa</h2>
+        <div class="tags"><span class="tag">Tamarind</span><span class="tag">Fish Broth</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Simmer mackerel with tamarind, lemongrass & torch ginger; blend chilies & shrimp paste into broth.</li>
+            <li>Serve over laksa noodles with cucumber, pineapple, mint & <em>heko</em>.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Sour, spicy and deeply aromatic — a Penang classic.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 Roti Canai -->
+    <article class="card" id="roti-canai">
+      <div class="img-wrap"><img src="image/roti-canai.jpg" alt="Flaky roti canai with dhal curry"></div>
+      <div class="content">
+        <h2>4) Roti Canai</h2>
+        <div class="tags"><span class="tag">Flatbread</span><span class="tag">Breakfast</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Knead flour, water, salt, sugar, ghee; rest dough overnight in oil.</li>
+            <li>Stretch paper-thin, coil, flatten and griddle till crisp outside, soft inside.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Technique-heavy but worth it — serve with dhal, curry or sugar.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 Satay -->
+    <article class="card" id="satay">
+      <div class="img-wrap"><img src="image/Satay-.jpg" alt="Grilled chicken satay with peanut sauce"></div>
+      <div class="content">
+        <h2>5) Satay</h2>
+        <div class="tags"><span class="tag">Grilled</span><span class="tag">Peanut Sauce</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Marinate meat with lemongrass, coriander, turmeric, sugar & salt.</li>
+            <li>Grill skewers over charcoal; serve with rich peanut sauce, cucumbers & onions.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Charcoal smoke + sweet-spiced marinade = unbeatable hawker vibes.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 Beef Rendang -->
+    <article class="card" id="rendang">
+      <div class="img-wrap"><img src="image/rendang.jpg" alt="Beef rendang dry curry"></div>
+      <div class="content">
+        <h2>6) Beef Rendang</h2>
+        <div class="tags"><span class="tag">Slow-Cooked</span><span class="tag">Coconut</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Blend aromatics (shallot, garlic, ginger, galangal, lemongrass, chilies).</li>
+            <li>Simmer beef with spice paste, coconut milk & toasted coconut until dry and dark.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Layers of spice that intensify as it caramelizes — even better the next day.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7 Hainanese Chicken Rice -->
+    <article class="card" id="hainanese-chicken-rice">
+      <div class="img-wrap"><img src="image/hainanese-chicken-rice.jpg" alt="Hainanese chicken rice with chilli and ginger-scallion sauce"></div>
+      <div class="content">
+        <h2>7) Hainanese Chicken Rice</h2>
+        <div class="tags"><span class="tag">Poached Chicken</span><span class="tag">Aromatic Rice</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Poach whole chicken with ginger & spring onion; ice-bath.</li>
+            <li>Fry chicken fat with garlic & ginger; cook rice in stock with pandan.</li>
+            <li>Serve with chilli sauce and ginger-scallion oil.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Silky chicken, glossy rice, zippy sauces — simple and perfect.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8 Mee Goreng Mamak -->
+    <article class="card" id="mee-goreng-mamak">
+      <div class="img-wrap"><img src="image/mee-goreng-mamak.jpg" alt="Mee Goreng Mamak with tofu, egg and potatoes"></div>
+      <div class="content">
+        <h2>8) Mee Goreng Mamak</h2>
+        <div class="tags"><span class="tag">Mamak</span><span class="tag">Stir-fry</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Toss yellow noodles with garlic, chilies, tofu, potatoes & egg.</li>
+            <li>Season with kicap manis, soy, ketchup & sambal; finish with sprouts and lime.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Savory-sweet with a spicy kick — classic mamak supper fuel.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9 Nasi Kandar -->
+    <article class="card" id="nasi-kandar">
+      <div class="img-wrap"><img src="image/nasi-kandar.jpg" alt="Nasi Kandar with mixed curries and side dishes"></div>
+      <div class="content">
+        <h2>9) Nasi Kandar</h2>
+        <div class="tags"><span class="tag">Penang</span><span class="tag">Mixed Curries</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Steam rice; pair with assorted curries (fish, chicken, beef) and sides.</li>
+            <li>“Banjir” with a mix of gravies for that signature flavor.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>An institution of Penang — the magic is in the curry mix.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10 Cendol -->
+    <article class="card" id="cendol">
+      <div class="img-wrap"><img src="image/cendol.jpg" alt="Cendol with gula melaka syrup and coconut milk"></div>
+      <div class="content">
+        <h2>10) Cendol</h2>
+        <div class="tags"><span class="tag">Dessert</span><span class="tag">Gula Melaka</span></div>
+        <div class="section">
+          <h3>Recipe (summary)</h3>
+          <ul>
+            <li>Make pandan jellies (mung bean flour), chill in ice water.</li>
+            <li>Serve with shaved ice, coconut milk & palm sugar syrup; add red beans if you like.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Comments</h3>
+          <p>Cool, creamy, caramel-scented — the perfect Malaysian heat antidote.</p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="section__container footer__container">
+            <div class="footer__col">
+                <h3>Asian Foods Explorer</h3>
+                <p>
+                    Discover the perfect harmony of flavors in Thai cuisine, where every dish tells a story of tradition and innovation.
+                </p>
+            </div>
+
+            <div class="footer__col social-media">
+                <h4>Social Media</h4>
+                <p><a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i> Facebook</a></p>
+                <p><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i> Instagram</a></p>
+                <p><a href="http://www.x.com/"><i class="fa fa-twitter"></i> X </a></p>
+                <p><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i>Youtube</a></p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Cuisines</h4>
+                <p><a href="japaneseFood.html">Japanese Food</a></p>
+                <p><a href="malaysianFood.html">Malaysian Food</a></p>
+                <p><a href="thaiFood.html">Thai Food</a></p>
+                <p><a href="koreanFood.html">Korean Food</a></p>
+            </div>
+
+            <div class="footer__col">
+                <p><a href="homepage.html">Home</a></p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p><a href="japaneseFood.html">Japanese Cuisine</a></p>
+                <p><a href="MalaysiaFood.html">Malaysian Cuisine</a></p>
+                <p><a href="thaiFood.html">Thai Cuisine</a></p>
+		<p><a href="koreanFood.html">Korean Cuisine</a></p>
+		<p><a href="Top10mlyfood.html">Top 10 Malaysia food</a></p>
+		<p><a href="feedback.html">feedback</a></p>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 Asian Foods Explorer. All rights reserved.
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/food.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+    
+    <h2>Appendix & References</h2>
+    <div class="appendix">
+      <p>Selected recipe references and reading:</p>
+      <ul>
+        <li>Nasi Lemak reference – Bon Appétit. <a href="https://www.bonappetit.com/recipe/nasi-lemak">bonappetit.com/recipe/nasi-lemak</a></li>
+        <li>Char Kway Teow – Wok & Skillet. <a href="https://www.wokandskillet.com/penang-char-kway-teow/">wokandskillet.com/penang-char-kway-teow</a></li>
+        <li>Asam Laksa – Season with Spice. <a href="https://blog.seasonwithspice.com/2011/09/penang-asam-laksa-recipe.html">seasonwithspice.com</a></li>
+        <li>Roti Canai – Rasa Malaysia & The Flavor Bender. <a href="https://rasamalaysia.com/roti-canai-roti-paratha-recipe/">rasamalaysia.com</a>, <a href="https://www.theflavorbender.com/flaky-roti-canai-recipe/">theflavorbender.com</a></li>
+        <li>Satay & Peanut Sauce – Rasa Malaysia / Nomadette. <a href="https://rasamalaysia.com/recipe-chicken-satay/">rasamalaysia.com</a>, <a href="https://nomadette.com/satay-peanut-sauce/">nomadette.com</a></li>
+        <li>Beef Rendang – Singaporean & Malaysian Recipes / RecipeTinEats. <a href="https://www.singaporeanmalaysianrecipes.com/beef-rendang-daging/">singaporeanmalaysianrecipes.com</a>, <a href="https://www.recipetineats.com/beef-rendang/">recipetineats.com</a></li>
+        <li>Hainanese Chicken Rice – Adam Liaw & Azlin Bloor. <a href="https://adamliaw.com/recipe/hainanese-chicken-rice">adamliaw.com</a>, <a href="https://www.singaporeanmalaysianrecipes.com/hainanese-chicken-rice-recipe/">singaporeanmalaysianrecipes.com</a></li>
+        <li>Mee Goreng Mamak – Joyous Apron / Food52 / Nomadette. <a href="https://www.joyousapron.com/mee-goreng-mamak/">joyousapron.com</a>, <a href="https://food52.com/recipes/84709-best-mamak-style-stir-fried-noodles-recipe">food52.com</a>, <a href="https://nomadette.com/mee-goreng-mamak/">nomadette.com</a></li>
+        <li>Nasi Kandar – Bernama & School of Wok. <a href="https://lifestyle.bernama.com/news-en.php?id=2337545">bernama.com</a>, <a href="https://schoolofwok.co.uk/tips-and-recipes/malaysian-coconut-chicken-curry-nasi-kandar">schoolofwok.co.uk</a></li>
+        <li>Cendol – Jaja Bakes (cendol dawet). <a href="https://jajabakes.com/iced-cendol-dawet/">jajabakes.com</a></li>
+        <li>Additional reference requested: Allrecipes gallery – “Easy Chinese Recipes”. <a href="https://www.allrecipes.com/gallery/easy-chinese-recipes/">allrecipes.com/gallery/easy-chinese-recipes/</a></li>
+      </ul>
+      <p class="credits">© 2025. Built for personal/educational use.</p>
+    </div>
+  </footer>
+</body>
+</html>

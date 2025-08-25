@@ -1,0 +1,393 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Food</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet">
+    <!-- font wesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/HP.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/share.css">
+    
+    <style>
+        .food-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .main-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24, #ff9ff3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 12px;
+        }
+        
+                 .nav-logo {
+             width: 100%;
+             height: 200px;
+             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+             border-radius: 0;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             position: relative;
+             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+             border: none;
+             overflow: hidden;
+             margin: 0;
+             padding: 20px;
+         }
+         
+         .nav-logo::before {
+             content: '';
+             width: 120px;
+             height: 120px;
+             background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+             border-radius: 50%;
+             position: absolute;
+             top: 40px;
+             left: 50px;
+             box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo::after {
+             content: '';
+             width: 8px;
+             height: 140px;
+             background: linear-gradient(to bottom, #495057 0%, #343a40 100%);
+             position: absolute;
+             top: 30px;
+             left: 170px;
+             border-radius: 4px;
+             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo .fork {
+             position: absolute;
+             top: 50px;
+             right: 80px;
+             width: 8px;
+             height: 100px;
+             background: linear-gradient(to bottom, #495057 0%, #343a40 100%);
+             border-radius: 4px;
+             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo .fork::before {
+             content: '';
+             position: absolute;
+             top: -8px;
+             left: -4px;
+             width: 16px;
+             height: 24px;
+             background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+             border-radius: 4px;
+             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo .fork::after {
+             content: '';
+             position: absolute;
+             top: -4px;
+             left: -2px;
+             width: 12px;
+             height: 16px;
+             background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+             border-radius: 2px;
+             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo .spoon {
+             position: absolute;
+             bottom: 50px;
+             right: 80px;
+             width: 8px;
+             height: 90px;
+             background: linear-gradient(to bottom, #495057 0%, #343a40 100%);
+             border-radius: 4px;
+             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo .spoon::before {
+             content: '';
+             position: absolute;
+             bottom: -12px;
+             left: -6px;
+             width: 20px;
+             height: 20px;
+             background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+             border-radius: 50%;
+             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+         }
+         
+         .nav-logo .spoon::after {
+             content: '';
+             position: absolute;
+             bottom: -8px;
+             left: -4px;
+             width: 16px;
+             height: 16px;
+             background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+             border-radius: 50%;
+             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+         }
+         
+         .nav__img {
+             width: 100%;
+             margin: 0;
+             padding: 0;
+         }
+         
+         .nav__img a {
+             display: block;
+             width: 100%;
+         }
+    </style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="nav__img">
+			<a href="index.html">
+				<img src="image/WebName.jpg" width:="" 100%;="" height:="" 200px;="" object-fit:="" cover;="" border-radius:="" 0;"="">
+			</a>
+		</div>
+
+		<div id="mySidebar" class="sidebar">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="homepage.html">Home</a>
+			<a href="aboutUs.html">About Us</a>
+			<a href="japaneseFood.html">Japanese Cuisine</a>
+			<a href="MalaysiaFood.html">Malaysian Cuisine</a>
+			<a href="thaiFood.html">Thai Cuisine</a>
+			<a href="koreanFood.html">Korean Cuisine</a>
+			<a href="Top10mlyfood.html">Top 10 Malaysia food</a>
+			<a href="feedback.html">feedback</a>
+		</div>
+
+		<div id="main">
+			<button class="openbtn" onclick="openNav()">☰</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="nav__links">
+				<li class="link "><a href="homepage.html">Home</a></li>
+				<li class="link"><a href="aboutUs.html">About Us</a></li>
+				<li class="link"><a href="japaneseFood.html">Japanese Cuisine</a></li>
+				<li class="link"><a href="MalaysiaFood.html">Malaysian Cuisine</a></li>
+				<li class="link"><a href="thaiFood.html">Thai Cuisine</a></li>
+				<li class="link"><a href="koreanFood.html">Korean Cuisine</a></li>
+				<li class="link"><a href="Top10mlyfood.html">Top 10 Malaysia food</a></li>
+				<li class="link"><a href="feedback.html">feedback</a></li>
+			</ul>
+		</div>
+	</nav>
+
+    <!--Main-->
+    <section class="food_main">
+        <div class="content">
+            <h3>Japanese Food</h3>
+            <p>
+                Japanese cuisine is renowned for its emphasis on seasonal ingredients, meticulous preparation, and beautiful presentation. 
+                The cuisine is characterized by its use of fresh, high-quality ingredients and minimal seasoning to highlight natural flavors. 
+                Key dishes include Sushi (vinegared rice with various ingredients), Ramen (noodle soup with rich broth), 
+                Tempura (battered and fried seafood/vegetables), and Sashimi (fresh raw fish). Japanese food is known for its 
+                balance of flavors, artistic presentation, and health benefits. The cuisine reflects Japan's deep respect for nature 
+                and the changing seasons, making it both a culinary and cultural experience.
+            </p>
+            <div class="food_btn">
+                <a href="#food">Explore Japanese Food</a>
+            </div>
+        </div>
+
+        <div class="food_image">
+            <div class="food-placeholder">
+                <img src="image/Japanese Cuisine.jpg" alt="Japanese Cuisine" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+            </div>
+
+        </div>
+    </section>
+
+    <!--Food-->
+    <section id="food" class="food">
+        <div class="section__container">
+            <h2 class="section__header">Popular Japanese Dishes</h2>
+            <div class="food__grid">
+                <div class="food__card">
+                    <div class="food-placeholder">
+                        <img src="image/Sushi.webp" alt="Sushi" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="food__content">
+                        <h4>Sushi</h4>
+                        <p>
+                            Sushi is a traditional Japanese dish of prepared vinegared rice accompanied by a variety of ingredients, 
+                            such as seafood, vegetables, and occasionally tropical fruits. Styles of sushi and its presentation vary widely, 
+                            but the one key ingredient is "sushi rice", also referred to as shari, or sumeshi.
+                        </p>
+                        <div class="food__btn">
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food__card">
+                    <div class="food-placeholder">
+                        <img src="image/Ramen.jpg" alt="Ramen" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="food__content">
+                        <h4>Ramen</h4>
+                        <p>
+                            Ramen is a Japanese noodle soup dish. It consists of Chinese-style wheat noodles served in a meat or fish-based broth, 
+                            often flavored with soy sauce or miso, and uses toppings such as sliced pork, nori, menma, and scallions.
+                        </p>
+                        <div class="food__btn">
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food__card">
+                    <div class="food-placeholder">
+                        <img src="image/Tempura.webp" alt="Tempura" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="food__content">
+                        <h4>Tempura</h4>
+                        <p>
+                            Tempura is a Japanese dish usually consisting of seafood, meat and vegetables that have been battered and deep fried. 
+                            The dish was introduced by the Portuguese in Nagasaki through fritter-cooking techniques in the 16th century.
+                        </p>
+                        <div class="food__btn">
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food__card">
+                    <div class="food-placeholder">
+                        <img src="image/Sashimi.webp" alt="Sashimi" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="food__content">
+                        <h4>Sashimi</h4>
+                        <p>
+                            Sashimi is a Japanese delicacy consisting of fresh raw fish or meat sliced into thin pieces and often eaten with soy sauce. 
+                            The word sashimi means "pierced body", i.e. "pierced meat", "pierced fish", "pierced food".
+                        </p>
+                        <div class="food__btn">
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food__card">
+                    <div class="food-placeholder">
+                        <img src="image/Miso soup.webp" alt="Miso soup" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="food__content">
+                        <h4>Miso Soup</h4>
+                        <p>
+                            Miso soup is a traditional Japanese soup consisting of a stock called "dashi" into which softened miso paste is mixed. 
+                            In addition, there are many optional ingredients that may be added depending on regional and seasonal recipes.
+                        </p>
+                        <div class="food__btn">
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food__card">
+                    <div class="food-placeholder">
+                        <img src="image/Yakitori.webp" alt="Yakitori" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="food__content">
+                        <h4>Yakitori</h4>
+                        <p>
+                            Yakitori is a Japanese type of skewered chicken. Its preparation involves skewering the meat with kushi, 
+                            a type of skewer typically made of steel, bamboo, or similar materials. Afterwards, they are grilled over a charcoal fire.
+                        </p>
+                        <div class="food__btn">
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <h3>Asian Foods Explorer</h3>
+                <p>
+                    Discover the perfect harmony of flavors in Thai cuisine, where every dish tells a story of tradition and innovation.
+                </p>
+            </div>
+
+            <div class="footer__col social-media">
+                <h4>Social Media</h4>
+                <p><a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i> Facebook</a></p>
+                <p><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i> Instagram</a></p>
+                <p><a href="http://www.x.com/"><i class="fa fa-twitter"></i> X </a></p>
+                <p><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i>Youtube</a></p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Cuisines</h4>
+                <p><a href="japaneseFood.html">Japanese Food</a></p>
+                <p><a href="malaysianFood.html">Malaysian Food</a></p>
+                <p><a href="thaiFood.html">Thai Food</a></p>
+                <p><a href="koreanFood.html">Korean Food</a></p>
+		
+		<h4>Sources</h4>
+
+		<p><a href="https://japanspecialist.com/w/the-ultimate-guide-to-japanese-food">Source 1</a></p>
+                <p><a href="https://en.wikipedia.org/wiki/Ramen">Source 2</a></p>
+                <p><a href="https://www.byfood.com/blog/travel-tips/japanese-traditional-foods">Source 3</a></p>
+
+            </div>
+
+            <div class="footer__col">
+                 <p><a href="homepage.html">Home</a></p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p><a href="japaneseFood.html">Japanese Cuisine</a></p>
+                <p><a href="MalaysiaFood.html">Malaysian Cuisine</a></p>
+                <p><a href="thaiFood.html">Thai Cuisine</a></p>
+		<p><a href="koreanFood.html">Korean Cuisine</a></p>
+		<p><a href="Top10mlyfood.html">Top 10 Malaysia food</a></p>
+		<p><a href="feedback.html">feedback</a></p>
+             </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 Asian Foods Explorer. All rights reserved.
+        </div>
+    </footer>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/food.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+
+
+</body></html>
