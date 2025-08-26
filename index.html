@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- font wesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/HP.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/festival.css" />
+    <link rel="stylesheet" href="css/share.css" />
+
+ <style>
+      
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cookie-icon {
+            font-size: 2.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .cookie-text {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .cookie-text h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .cookie-text p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .cookie-text a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .cookie-text a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cookie-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cookie-btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-accept {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-accept:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-decline {
+            background: rgba(239, 68, 68, 0.1);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-decline:hover {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cookie-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 20px;
+            }
+
+            .cookie-content {
+                min-width: unset;
+            }
+
+            .cookie-actions {
+                justify-content: center;
+            }
+
+            .cookie-btn {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cookie-banner {
+                padding: 20px 16px;
+            }
+
+            .cookie-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .cookie-btn {
+                width: 100%;
+            }
+
+            .demo-content h1 {
+                font-size: 2rem;
+            }
+
+            .demo-content p {
+                font-size: 1rem;
+            }
+    </style>
+
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="nav__img"><a href="index.html"><img src="image/WebName.jpg" width:="" 100%;="" height:="" 200px;="" object-fit:="" cover;="" border-radius:="" 0;"=""></a></div>
+		<div id="mySidebar" class="sidebar">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="index.html">Home</a>
+			<a href="aboutUs.html">About Us</a>
+			<a href="japaneseFood.html">Japanese Cuisine</a>
+			<a href="MalaysiaFood.html">Malaysian Cuisine</a>
+			<a href="thaiFood.html">Thai Cuisine</a>
+			<a href="koreanFood.html">Korean Cuisine</a>
+			<a href="Top10mlyfood.html">Top 10 Malaysia food</a>
+			<a href="feedback.html">feedback</a>
+		</div>
+
+		<div id="main">
+			<button class="openbtn" onclick="openNav()">☰</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="nav__links">
+				<li class="link "><a href="index.html">Home</a></li>
+				<li class="link"><a href="aboutUs.html">About Us</a></li>
+				<li class="link"><a href="japaneseFood.html">Japanese Cuisine</a></li>
+				<li class="link"><a href="MalaysiaFood.html">Malaysian Cuisine</a></li>
+				<li class="link"><a href="thaiFood.html">Thai Cuisine</a></li>
+				<li class="link"><a href="koreanFood.html">Korean Cuisine</a></li>
+				<li class="link"><a href="Top10mlyfood.html">Top 10 Malaysia food</a></li>
+				<li class="link"><a href="feedback.html">feedback</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+    <!--Main-->
+    <section class="festival_main">
+        <div class="main_container">
+            <div class="main_content">
+                <h2>Asian Cuisines</h2>
+                <h3>Taste the Essence of Asia – A Blend of Tradition, Flavor, and Culture</h3>
+                <div class="main_button">
+                    <a href="#festival" class="festival_button">Explore different asian cuisines </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="festival" id="festival">
+        <h1 class="festival_header">Asian Cuisines</h1>
+        <p class="festival_intro">
+            Asian cuisine is renowned for its rich and diverse dishes, catering to every palate. From rich and aromatic curries to light and refreshing noodle soups, the sheer variety is dazzling. Whether it's rice, noodles, seafood, or street food, each dish boasts its own unique flavor and style. With its vast array of options, Asia is a haven for food lovers, offering the opportunity to explore new flavors and enjoy diverse cuisines..<br><br>
+
+            Below are some of the asian countries with different foods:
+        </p>
+        <div class="festival_container">
+            <div class="festival_image">
+                <img src="image/Japan.jpg" alt="Japanese Cuisines">
+            </div>
+            <div class="festival_content" style="background-color: pink;">
+                <h2>Japanese Cuisines</h2>
+                <p>Japanese cuisine is one of the world's most beloved cuisines, renowned for its balance of flavor, freshness, and presentation. From sushi and sashimi to ramen, tempura, and bento, Japanese cuisine not only celebrates the natural flavors of ingredients but also offers a wide variety of options. Respected not only for its delicious flavors, but also for its emphasis on health, simplicity, and seasonality, Japanese cuisine is beloved by people around the world, ensuring every meal is delightful and satisfying.</p>
+            </div>
+        </div>
+        <div class="festival_container reverse">
+            <div class="festival_image">
+                <img src="image/Malaysia.jpg" alt="Malaysian Cuisines">
+            </div>
+            <div class="festival_content" style="background-color: Blue;">
+                <h2>Malaysian Cuisines</h2>
+                <p>Malaysian cuisine is known for its rich flavors, rich spices, and heady blend of tastes. Influenced by Malay, Chinese, and Indian cooking, its dishes range from nasi lemak, satay, laksa, and roti canai. Each dish is bursting with unique flavors—from spicy and savory to sweet and aromatic. Known for its diversity and variety, Malaysian cuisine boasts a wide array of delicious dishes that are universally beloved.</p>
+            </div>
+        </div>
+        <div class="festival_container">
+            <div class="festival_image">
+                <img src="image/Thailand.jpg" alt="Thailand Cuisines">
+            </div>
+            <div class="festival_content" style="background-color: Gold;">
+                <h2>Thailand Cuisines</h2>
+                <p>Thai cuisine is renowned worldwide for its vibrant flavors and perfect balance of sweet, sour, salty, and spicy. From fragrant curries and pungent Tom Yum Goong to refreshing papaya salads and hearty pad Thai, Thai cuisine offers a wide variety that will delight your palate. Fresh herbs, spices, and local ingredients give Thai cuisine its unique flavor, making every meal truly memorable and enjoyable. Beloved worldwide, Thai cuisine is a true feast for the palate and its diversity.
+                </p>
+            </div>
+        </div>
+        <div class="festival_container reverse">
+            <div class="festival_image">
+                <img src="image/Korea.jpg" alt="Korean Cuisines">
+            </div>
+            <div class="festival_content" style="background-color: Brown; ">
+                <h2>Korean Cuisines</h2>
+                <p>Korean cuisine is known for its rich flavors, vibrant colors, and rich menu. From spicy kimchi and tteokbokki to hearty bibimbap, bulgogi, and hearty stews, Korean food has something for everyone. Each dish is often accompanied by a variety of side dishes, making the dining experience both delicious and exciting. Beloved for its unique balance of spiciness, texture, and freshness, Korean cuisine continues to delight people around the world.</p>
+            </div>
+        </div>
+
+           </section>
+
+  <section class="recommendation-section">
+    <h2>Recommend a Food that you thinks should be known</h2>
+    <form id="recommendationForm">
+      <div class="mb-3">
+        <label for="foodInput" class="form-label">Your Food Recommendation:</label>
+        <input type="text" class="form-control" id="foodInput" placeholder="Enter a dish name..." required>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <div id="recommendationList">
+      <h4 class="mt-4">Previous Recommendations:</h4>
+      <ul class="recommendation-list" id="foodList"></ul>
+    </div>
+  </section>
+
+   
+   
+    <section class="social_share">
+        <h2>Share This Page</h2>
+        <div class="social_icons">
+            <a href="" target="_blank" class="social_icon facebook" id="facebook" aria-label="Share on Facebook">
+                <i class="fa fa-facebook-official fa-lg"></i>
+            </a>
+            <a href="" target="_blank" class="social_icon twitter" aria-label="Share on Twitter">
+                <i class="fa fa-twitter fa-lg"></i>
+            </a>
+            <a href="" target="_blank" class="social_icon instagram" aria-label="Share on Instagram">
+                <i class="fa fa-instagram fa-lg"></i>
+            </a>
+            <a href="" class="social_icon email" aria-label="Share via Email">
+                <i class="fa fa-envelope fa-lg"></i>
+            </a>
+        </div>
+    </section>
+
+<div class="cookie-banner show" id="cookieBanner">
+        <div class="cookie-container">
+            <div class="cookie-content">
+                <div class="cookie-icon">🍪</div>
+                <div class="cookie-text">
+                    <h3>We use cookies</h3>
+                    <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. </p>
+                </div>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-btn btn-decline" onclick="handleDecline()">Decline</button>
+                <button class="cookie-btn btn-accept" onclick="handleAccept()">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+ <script>
+    let bannerState = { isVisible: true };
+
+    function handleAccept() {
+      console.log('Cookies accepted');
+      hideBanner();
+      showNotification('All cookies accepted! 🍪', 'success');
+    }
+
+    function handleDecline() {
+      console.log('Cookies declined');
+      hideBanner();
+      showNotification('Cookies declined', 'info');
+    }
+
+    function hideBanner() {
+      const banner = document.getElementById('cookieBanner');
+      banner.classList.remove('show');
+      bannerState.isVisible = false;
+    }
+
+    function showBanner() {
+      const banner = document.getElementById('cookieBanner');
+      banner.classList.add('show');
+      bannerState.isVisible = true;
+    }
+
+    function showNotification(message, type) {
+      const notification = document.createElement('div');
+      notification.style.cssText = `
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        background: ${type === 'success' ? 'rgba(16, 185, 129, 0.95)' : 'rgba(59, 130, 246, 0.95)'};
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        z-index: 1001;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      `;
+      notification.textContent = message;
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+      }, 100);
+
+      setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => notification.remove(), 300);
+      }, 3000);
+    }
+
+
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      let expires = "expires=" + d.toUTCString();
+      document.cookie = name + "=" + JSON.stringify(value) + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(name + "=") === 0) {
+          return JSON.parse(c.substring(name.length + 1, c.length));
+        }
+      }
+      return null;
+    }
+
+  
+    const form = document.getElementById('recommendationForm');
+    const foodInput = document.getElementById('foodInput');
+    const foodList = document.getElementById('foodList');
+
+    // Load previous recommendations from cookie
+    let recommendations = getCookie("foodRecommendations") || [];
+
+    function renderRecommendations() {
+      foodList.innerHTML = "";
+      recommendations.forEach(food => {
+        let li = document.createElement("li");
+        li.textContent = food;
+        li.classList.add("recommendation-item");
+        foodList.appendChild(li);
+      });
+    }
+    renderRecommendations();
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let food = foodInput.value.trim();
+      if (food) {
+        recommendations.push(food);
+        setCookie("foodRecommendations", recommendations, 7); // store for 7 days
+        renderRecommendations();
+        foodInput.value = "";
+      }
+    });
+  </script>
+
+
+    <footer class="footer">
+				<div class="section__container footer__container">
+					<div class="footer__col">
+                <h3>Asian Foods Explorer</h3>
+                <p>
+                    Asian cuisine encompasses a diverse range of dishes, from tangy and spicy to light and refreshing. Whether it's noodles, rice, curry, or street food, every bite tells a story of flavor and creativity. Join us as we explore the cuisine that makes Asia a food lover's paradise!
+
+						</p>
+					</div>
+
+					<div class="footer__col social-media">
+						<h4>Social Media</h4>
+						<p><a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i> Facebook</a></p>
+						<p><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i> Instagram</a></p>
+						<p><a href="http://www.x.com/"><i class="fa fa-twitter"></i> X </a></p>
+						<p><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i>Youtube</a></p>
+					</div>
+
+					<div class="footer__col">
+                <h4>Cuisines</h4>
+                <p><a href="japaneseFood.html">Japanese Food</a></p>
+                <p><a href="malaysianFood.html">Malaysian Food</a></p>
+                <p><a href="thaiFood.html">Thai Food</a></p>
+                <p><a href="koreanFood.html">Korean Food</a></p>
+
+		 <h4>Sources<h4>
+                <p><a href="https://www.pinterest.com/pin/766174955327497951/">Source 1</a></p>
+                <p><a href="https://wallpapers.com/japan-cherry-blossom">Source 2</a></p>
+                <p><a href="https://wallpaperaccess.com/bangkok">Source 3</a></p>
+                <p><a href="https://www.kimkim.com/c/10-days-in-south-korea-unique-itineraries">Source 4</a></p>
+
+					</div>
+
+					<div class="footer__col">
+						 <p><a href="index.html">Home</a></p>
+                <p><a href="aboutUs.html">About Us</a></p>
+                <p><a href="japaneseFood.html">Japanese Cuisine</a></p>
+                <p><a href="MalaysiaFood.html">Malaysian Cuisine</a></p>
+                <p><a href="thaiFood.html">Thai Cuisine</a></p>
+		<p><a href="koreanFood.html">Korean Cuisine</a></p>
+		<p><a href="Top10mlyfood.html">Top 10 Malaysia food</a></p>
+		<p><a href="feedback.html">feedback</a></p>
+
+					</div>
+				</div>
+				<div class="footer__bar">
+            Copyright © 2024 Asian Foods Explorer. All rights reserved.
+				</div>
+			</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/quiz.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+    <!--Script for facebook sharing-->
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    
+
+</body>
+
+</html>
